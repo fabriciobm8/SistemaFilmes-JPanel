@@ -21,7 +21,7 @@ public class ExcelExporter {
 
       // Criar cabeçalho
       Row headerRow = sheet.createRow(0);
-      String[] columns = {"ID", "Descrição", "Diretor", "Gênero", "Tipo", "Origem",
+      String[] columns = {"ID", "Descrição", "Ano", "Diretor", "Gênero", "Tipo", "Origem",
           "Tipo de Mídia", "Locação", "Sublocação", "Estante",
           "Estante Prateleira", "Estante Prateleira Coluna"};
 
@@ -38,16 +38,17 @@ public class ExcelExporter {
 
         row.createCell(0).setCellValue(filme.getId() != null ? filme.getId().doubleValue() : 0.0);
         row.createCell(1).setCellValue(filme.getDescricao() != null ? filme.getDescricao() : "");
-        row.createCell(2).setCellValue(filme.getDiretor() != null ? filme.getDiretor() : "");
-        row.createCell(3).setCellValue(filme.getGenero() != null ? filme.getGenero().getDescricao() : "");
-        row.createCell(4).setCellValue(filme.getTipo() != null ? filme.getTipo().getDescricao() : "");
-        row.createCell(5).setCellValue(filme.getOrigem() != null ? filme.getOrigem().getDescricao() : "");
-        row.createCell(6).setCellValue(filme.getTipoMidia() != null ? filme.getTipoMidia().getDescricao() : "");
-        row.createCell(7).setCellValue(filme.getLocacao() != null ? filme.getLocacao().getDescricao() : "");
-        row.createCell(8).setCellValue(filme.getSublocacao() != null ? filme.getSublocacao().getDescricao() : "");
-        row.createCell(9).setCellValue(filme.getEstante() != null ? filme.getEstante() : "");
-        row.createCell(10).setCellValue(filme.getEstantePrateleira() != null ? filme.getEstantePrateleira() : "");
-        row.createCell(11).setCellValue(filme.getEstantePrateleiraColuna() != null ? filme.getEstantePrateleiraColuna() : "");
+        row.createCell(2).setCellValue(filme.getAno() != null ? filme.getAno().doubleValue() : 0.0);
+        row.createCell(3).setCellValue(filme.getDiretor() != null ? filme.getDiretor() : "");
+        row.createCell(4).setCellValue(filme.getGenero() != null ? filme.getGenero().getDescricao() : "");
+        row.createCell(5).setCellValue(filme.getTipo() != null ? filme.getTipo().getDescricao() : "");
+        row.createCell(6).setCellValue(filme.getOrigem() != null ? filme.getOrigem().getDescricao() : "");
+        row.createCell(7).setCellValue(filme.getTipoMidia() != null ? filme.getTipoMidia().getDescricao() : "");
+        row.createCell(8).setCellValue(filme.getLocacao() != null ? filme.getLocacao().getDescricao() : "");
+        row.createCell(9).setCellValue(filme.getSublocacao() != null ? filme.getSublocacao().getDescricao() : "");
+        row.createCell(10).setCellValue(filme.getEstante() != null ? filme.getEstante() : "");
+        row.createCell(11).setCellValue(filme.getEstantePrateleira() != null ? filme.getEstantePrateleira() : "");
+        row.createCell(12).setCellValue(filme.getEstantePrateleiraColuna() != null ? filme.getEstantePrateleiraColuna() : "");
       }
 
       // Ajustar largura das colunas
