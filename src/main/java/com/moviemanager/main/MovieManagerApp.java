@@ -14,6 +14,15 @@ public class MovieManagerApp {
             try {
                 // Configura o frame principal
                 MainFrame mainFrame = new MainFrame();
+
+                // ADICIONE AQUI O ÍCONE
+                try {
+                    // Usando ClassLoader
+                    ImageIcon icon = new ImageIcon(ClassLoader.getSystemResource("icons/filme.png"));
+                    mainFrame.setIconImage(icon.getImage());
+                } catch (Exception iconException) {
+                    System.out.println("Não foi possível carregar o ícone: " + iconException.getMessage());
+                }
                 
                 // Centraliza na tela
                 Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
