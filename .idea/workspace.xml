@@ -6,35 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="6aac3349-c1e6-4f2d-81e4-f8ef96df188e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/moviemanager/controller/FilmeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/moviemanager/controller/FilmeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/moviemanager/model/Filme.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/moviemanager/model/Filme.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/moviemanager/model/dao/FilmeDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/moviemanager/model/dao/FilmeDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/moviemanager/util/DatabaseConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/moviemanager/util/DatabaseConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/moviemanager/util/ExcelExporter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/moviemanager/util/ExcelExporter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/moviemanager/view/FilmeFormDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/moviemanager/view/FilmeFormDialog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/moviemanager/view/FilmeTableModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/moviemanager/view/FilmeTableModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/moviemanager/view/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/moviemanager/view/MainFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/MovieManager.exe" beforeDir="false" afterPath="$PROJECT_DIR$/target/MovieManager.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/moviemanager/controller/FilmeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/moviemanager/controller/FilmeController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/moviemanager/model/Filme.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/moviemanager/model/Filme.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/moviemanager/model/dao/FilmeDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/moviemanager/model/dao/FilmeDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/moviemanager/util/DatabaseConnection.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/moviemanager/util/DatabaseConnection.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/moviemanager/util/ExcelExporter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/moviemanager/util/ExcelExporter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/moviemanager/view/FilmeFormDialog$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/moviemanager/view/FilmeFormDialog$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/moviemanager/view/FilmeFormDialog$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/moviemanager/view/FilmeFormDialog$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/moviemanager/view/FilmeFormDialog.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/moviemanager/view/FilmeFormDialog.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/moviemanager/view/FilmeTableModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/moviemanager/view/FilmeTableModel.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/moviemanager/view/MainFrame$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/moviemanager/view/MainFrame$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/moviemanager/view/MainFrame$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/moviemanager/view/MainFrame$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/moviemanager/view/MainFrame$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/moviemanager/view/MainFrame$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/moviemanager/view/MainFrame$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/moviemanager/view/MainFrame$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/moviemanager/view/MainFrame$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/moviemanager/view/MainFrame$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/moviemanager/view/MainFrame$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/moviemanager/view/MainFrame$6.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/moviemanager/view/MainFrame$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/moviemanager/view/MainFrame$7.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/moviemanager/view/MainFrame$ComboItem.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/moviemanager/view/MainFrame$ComboItem.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/moviemanager/view/MainFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/moviemanager/view/MainFrame.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/movie-manager-1.0-SNAPSHOT-jar-with-dependencies.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/movie-manager-1.0-SNAPSHOT-jar-with-dependencies.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/movie-manager-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/movie-manager-1.0-SNAPSHOT.jar" afterDir="false" />
     </list>

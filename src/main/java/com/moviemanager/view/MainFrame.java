@@ -64,50 +64,49 @@ public class MainFrame extends JFrame {
         setExtendedState(JFrame.MAXIMIZED_BOTH);
 
         // Inicializa componentes
-        txtDescricaoFiltro = new JTextField(15);
-        txtAnoInicialFiltro = new JTextField(4);
-        txtAnoFinalFiltro = new JTextField(4);
-        txtDiretorFiltro = new JTextField(15);
-
+        txtDescricaoFiltro = new JTextField(12); // Aumentado de 8 para 12
+        txtAnoInicialFiltro = new JTextField(3); // Reduzido de 4 para 3
+        txtAnoFinalFiltro = new JTextField(3); // Reduzido de 4 para 3
+        txtDiretorFiltro = new JTextField(8);
         cmbGeneroFiltro = new JComboBox<>();
         cmbGeneroFiltro.addItem(new ComboItem<>(null, "Todos"));
         for (Genero genero : Genero.values()) {
             cmbGeneroFiltro.addItem(new ComboItem<>(genero, genero.getDescricao()));
         }
-
+        cmbGeneroFiltro.setPreferredSize(new Dimension(80, cmbGeneroFiltro.getPreferredSize().height));
         cmbTipoFiltro = new JComboBox<>();
         cmbTipoFiltro.addItem(new ComboItem<>(null, "Todos"));
         for (Tipo tipo : Tipo.values()) {
             cmbTipoFiltro.addItem(new ComboItem<>(tipo, tipo.getDescricao()));
         }
-
+        cmbTipoFiltro.setPreferredSize(new Dimension(80, cmbTipoFiltro.getPreferredSize().height));
         cmbOrigemFiltro = new JComboBox<>();
         cmbOrigemFiltro.addItem(new ComboItem<>(null, "Todos"));
         for (Origem origem : Origem.values()) {
             cmbOrigemFiltro.addItem(new ComboItem<>(origem, origem.getDescricao()));
         }
-
+        cmbOrigemFiltro.setPreferredSize(new Dimension(80, cmbOrigemFiltro.getPreferredSize().height));
         cmbTipoMidiaFiltro = new JComboBox<>();
         cmbTipoMidiaFiltro.addItem(new ComboItem<>(null, "Todos"));
         for (TipoMidia tipoMidia : TipoMidia.values()) {
             cmbTipoMidiaFiltro.addItem(new ComboItem<>(tipoMidia, tipoMidia.getDescricao()));
         }
-
+        cmbTipoMidiaFiltro.setPreferredSize(new Dimension(80, cmbTipoMidiaFiltro.getPreferredSize().height));
         cmbLocacaoFiltro = new JComboBox<>();
         cmbLocacaoFiltro.addItem(new ComboItem<>(null, "Todos"));
         for (Locacao locacao : Locacao.values()) {
             cmbLocacaoFiltro.addItem(new ComboItem<>(locacao, locacao.getDescricao()));
         }
-
+        cmbLocacaoFiltro.setPreferredSize(new Dimension(80, cmbLocacaoFiltro.getPreferredSize().height));
         cmbSublocacaoFiltro = new JComboBox<>();
         cmbSublocacaoFiltro.addItem(new ComboItem<>(null, "Todos"));
         for (Sublocacao sublocacao : Sublocacao.values()) {
             cmbSublocacaoFiltro.addItem(new ComboItem<>(sublocacao, sublocacao.getDescricao()));
         }
-
-        txtEstanteFiltro = new JTextField(10);
-        txtEstantePrateleiraFiltro = new JTextField(10);
-        txtEstantePrateleiraColunaFiltro = new JTextField(10);
+        cmbSublocacaoFiltro.setPreferredSize(new Dimension(80, cmbSublocacaoFiltro.getPreferredSize().height));
+        txtEstanteFiltro = new JTextField(5);
+        txtEstantePrateleiraFiltro = new JTextField(5);
+        txtEstantePrateleiraColunaFiltro = new JTextField(5);
 
         lblContagem = new JLabel("Total: 0 filmes");
 
@@ -143,105 +142,159 @@ public class MainFrame extends JFrame {
 
         // Painel de filtros (20% superior)
         JPanel panelFiltros = new JPanel(new GridBagLayout());
-        panelFiltros.setBorder(new EmptyBorder(0, 0, 0, 0)); // Remove margens do TitledBorder
+        panelFiltros.setBorder(null); // Sem borda interna
 
         GridBagConstraints gbc = new GridBagConstraints();
-        gbc.insets = new Insets(5, 2, 5, 2); // Reduz margens horizontais
+        gbc.insets = new Insets(5, 2, 5, 2); // Margem horizontal de 2 pixels
         gbc.anchor = GridBagConstraints.WEST;
 
-        // Primeira linha de filtros (colunas originais 0 a 5)
+        // Primeira linha de filtros
         gbc.gridx = 0;
         gbc.gridy = 0;
+        gbc.weightx = 0.0;
+        gbc.fill = GridBagConstraints.NONE;
         panelFiltros.add(new JLabel("Descrição:"), gbc);
 
         gbc.gridx = 1;
+        gbc.weightx = 0.3; // Aumentado de 0.2 para 0.3
+        gbc.fill = GridBagConstraints.HORIZONTAL;
         panelFiltros.add(txtDescricaoFiltro, gbc);
 
         gbc.gridx = 2;
+        gbc.weightx = 0.0;
+        gbc.fill = GridBagConstraints.NONE;
         panelFiltros.add(new JLabel("Ano Inicial:"), gbc);
 
         gbc.gridx = 3;
+        gbc.weightx = 0.05; // Reduzido de 0.1 para 0.05
+        gbc.fill = GridBagConstraints.HORIZONTAL;
         panelFiltros.add(txtAnoInicialFiltro, gbc);
 
         gbc.gridx = 4;
+        gbc.weightx = 0.0;
+        gbc.fill = GridBagConstraints.NONE;
         panelFiltros.add(new JLabel("Ano Final:"), gbc);
 
         gbc.gridx = 5;
+        gbc.weightx = 0.05; // Reduzido de 0.1 para 0.05
+        gbc.fill = GridBagConstraints.HORIZONTAL;
         panelFiltros.add(txtAnoFinalFiltro, gbc);
 
         // Segunda linha de filtros
         gbc.gridx = 0;
         gbc.gridy = 1;
+        gbc.weightx = 0.0;
+        gbc.fill = GridBagConstraints.NONE;
         panelFiltros.add(new JLabel("Diretor:"), gbc);
 
         gbc.gridx = 1;
+        gbc.weightx = 0.2;
+        gbc.fill = GridBagConstraints.HORIZONTAL;
         panelFiltros.add(txtDiretorFiltro, gbc);
 
         gbc.gridx = 2;
+        gbc.weightx = 0.0;
+        gbc.fill = GridBagConstraints.NONE;
         panelFiltros.add(new JLabel("Gênero:"), gbc);
 
         gbc.gridx = 3;
+        gbc.weightx = 0.2;
+        gbc.fill = GridBagConstraints.HORIZONTAL;
         panelFiltros.add(cmbGeneroFiltro, gbc);
 
         gbc.gridx = 4;
+        gbc.weightx = 0.0;
+        gbc.fill = GridBagConstraints.NONE;
         panelFiltros.add(new JLabel("Tipo:"), gbc);
 
         gbc.gridx = 5;
+        gbc.weightx = 0.2;
+        gbc.fill = GridBagConstraints.HORIZONTAL;
         panelFiltros.add(cmbTipoFiltro, gbc);
 
         // Terceira linha de filtros
         gbc.gridx = 0;
         gbc.gridy = 2;
+        gbc.weightx = 0.0;
+        gbc.fill = GridBagConstraints.NONE;
         panelFiltros.add(new JLabel("Origem:"), gbc);
 
         gbc.gridx = 1;
+        gbc.weightx = 0.2;
+        gbc.fill = GridBagConstraints.HORIZONTAL;
         panelFiltros.add(cmbOrigemFiltro, gbc);
 
         gbc.gridx = 2;
+        gbc.weightx = 0.0;
+        gbc.fill = GridBagConstraints.NONE;
         panelFiltros.add(new JLabel("Tipo de Mídia:"), gbc);
 
         gbc.gridx = 3;
+        gbc.weightx = 0.2;
+        gbc.fill = GridBagConstraints.HORIZONTAL;
         panelFiltros.add(cmbTipoMidiaFiltro, gbc);
 
         gbc.gridx = 4;
+        gbc.weightx = 0.0;
+        gbc.fill = GridBagConstraints.NONE;
         panelFiltros.add(new JLabel("Locação:"), gbc);
 
         gbc.gridx = 5;
+        gbc.weightx = 0.2;
+        gbc.fill = GridBagConstraints.HORIZONTAL;
         panelFiltros.add(cmbLocacaoFiltro, gbc);
 
         // Quarta linha de filtros
         gbc.gridx = 0;
         gbc.gridy = 3;
+        gbc.weightx = 0.0;
+        gbc.fill = GridBagConstraints.NONE;
         panelFiltros.add(new JLabel("Sublocação:"), gbc);
 
         gbc.gridx = 1;
+        gbc.weightx = 0.2;
+        gbc.fill = GridBagConstraints.HORIZONTAL;
         panelFiltros.add(cmbSublocacaoFiltro, gbc);
 
         gbc.gridx = 2;
+        gbc.weightx = 0.0;
+        gbc.fill = GridBagConstraints.NONE;
         panelFiltros.add(new JLabel("Estante:"), gbc);
 
         gbc.gridx = 3;
+        gbc.weightx = 0.1;
+        gbc.fill = GridBagConstraints.HORIZONTAL;
         panelFiltros.add(txtEstanteFiltro, gbc);
 
         gbc.gridx = 4;
+        gbc.weightx = 0.0;
+        gbc.fill = GridBagConstraints.NONE;
         panelFiltros.add(new JLabel("Estante Prateleira:"), gbc);
 
         gbc.gridx = 5;
+        gbc.weightx = 0.1;
+        gbc.fill = GridBagConstraints.HORIZONTAL;
         panelFiltros.add(txtEstantePrateleiraFiltro, gbc);
 
         // Quinta linha de filtros
         gbc.gridx = 0;
         gbc.gridy = 4;
+        gbc.weightx = 0.0;
+        gbc.fill = GridBagConstraints.NONE;
         panelFiltros.add(new JLabel("Estante Prat. Coluna:"), gbc);
 
         gbc.gridx = 1;
+        gbc.weightx = 0.1;
+        gbc.fill = GridBagConstraints.HORIZONTAL;
         panelFiltros.add(txtEstantePrateleiraColunaFiltro, gbc);
 
         // Botões de filtro
         gbc.gridx = 2;
         gbc.gridy = 4;
         gbc.gridwidth = 4;
+        gbc.weightx = 0.0;
         gbc.anchor = GridBagConstraints.CENTER;
+        gbc.fill = GridBagConstraints.NONE;
 
         JPanel panelBotoesFiltro = new JPanel();
         panelBotoesFiltro.add(btnFiltrar);
@@ -251,16 +304,23 @@ public class MainFrame extends JFrame {
         panelBotoesFiltro.add(lblContagem);
         panelFiltros.add(panelBotoesFiltro, gbc);
 
+        // Filler para espaço extra
+        gbc.gridx = 6;
+        gbc.gridy = 0;
+        gbc.gridheight = 5;
+        gbc.weightx = 0.5;
+        gbc.fill = GridBagConstraints.HORIZONTAL;
+        panelFiltros.add(Box.createHorizontalGlue(), gbc);
+
         // Painel para combinar imagem e filtros
         JPanel panelFiltroComImagem = new JPanel(new BorderLayout());
-        panelFiltroComImagem.setBorder(new EmptyBorder(0, 0, 0, 0)); // Sem margens extras
+        panelFiltroComImagem.setBorder(new EmptyBorder(0, 0, 0, 0)); // Sem margens
 
         // Adiciona a imagem à esquerda
         JLabel lblImagem = new JLabel();
         try {
             ImageIcon icon = new ImageIcon(getClass().getResource("/images/logo.png"));
-            // Usa o tamanho original (200x160 pixels); redimensione se necessário
-            Image img = icon.getImage(); // .getScaledInstance(150, 120, Image.SCALE_SMOOTH);
+            Image img = icon.getImage(); // Tamanho original (200x160 pixels)
             lblImagem.setIcon(new ImageIcon(img));
             lblImagem.setBorder(new EmptyBorder(5, 0, 5, 5)); // Margem mínima
         } catch (Exception e) {
@@ -269,10 +329,18 @@ public class MainFrame extends JFrame {
         }
         panelFiltroComImagem.add(lblImagem, BorderLayout.WEST);
 
-        // Adiciona o painel de filtros ao centro
-        JPanel panelFiltrosComBorda = new JPanel(new BorderLayout());
-        panelFiltrosComBorda.setBorder(new TitledBorder("Filtros"));
-        panelFiltrosComBorda.add(panelFiltros, BorderLayout.CENTER);
+        // Painel para filtros com título
+        JPanel panelFiltrosComBorda = new JPanel(new GridBagLayout());
+        panelFiltrosComBorda.setBorder(new TitledBorder("Filtros")); // Mantido com borda visível
+        GridBagConstraints gbcFiltros = new GridBagConstraints();
+        gbcFiltros.anchor = GridBagConstraints.WEST;
+        gbcFiltros.fill = GridBagConstraints.HORIZONTAL;
+        gbcFiltros.weightx = 1.0;
+        gbcFiltros.gridx = 0;
+        gbcFiltros.gridy = 0;
+        gbcFiltros.insets = new Insets(0, 0, 0, 0);
+        panelFiltrosComBorda.add(panelFiltros, gbcFiltros);
+
         panelFiltroComImagem.add(panelFiltrosComBorda, BorderLayout.CENTER);
 
         // Painel da tabela (60% meio)
@@ -298,7 +366,6 @@ public class MainFrame extends JFrame {
         carregarDados();
     }
 
-    // Restante do código (configureListeners, carregarDados, etc.) permanece igual
     private void configureListeners() {
         btnAdicionar.addActionListener(e -> adicionarFilme());
         btnEditar.addActionListener(e -> editarFilme());
