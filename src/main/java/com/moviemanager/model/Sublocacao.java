@@ -3,7 +3,11 @@ package com.moviemanager.model;
 public enum Sublocacao {
     APTO_QUARTO("Apto Quarto"),
     APTO_ESCRITORIO("Apto Escritório"),
-    CASA_QUARTO("Casa Quarto");
+    APTO_SALA("Apto Sala"),
+    APTO_SUITE("Apto Suíte"),
+    CASA_QUARTO("Casa Quarto"),
+    CASA_SALA("Casa Sala"),
+    EMPRESTIMO_TEMP("Emp. Temporário");
     
     private final String descricao;
     

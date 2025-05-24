@@ -1,8 +1,8 @@
 package com.moviemanager.model;
 
 public enum Locacao {
-    CASA("Casa"),
     APARTAMENTO("Apartamento"),
+    CASA("Casa"),
     EMPRESTIMO("Empréstimo");
     
     private final String descricao;

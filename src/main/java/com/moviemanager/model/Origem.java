@@ -1,9 +1,8 @@
 package com.moviemanager.model;
 
 public enum Origem {
-    NACIONAL("Nacional"),
-    INTERNACIONAL("Internacional");
-    
+    INTERNACIONAL("Internacional"),
+    NACIONAL("Nacional");
     private final String descricao;
     
     Origem(String descricao) {

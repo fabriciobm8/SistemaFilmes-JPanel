@@ -1,10 +1,20 @@
 package com.moviemanager.model;
 
 public enum Genero {
-    DRAMA("Drama"),
+
     ACAO("Ação"),
+    SUSPENSE("Suspense"),
     FICCAO("Ficção"),
-    TERROR("Terror");
+    TERROR("Terror"),
+    DRAMA("Drama"),
+    COMEDIA("Comédia"),
+    AVENTURA("Aventura"),
+    GUERRA("Guerra"),
+    WESTERN("Western"),
+    DOCUMENTARIO("Documentário"),
+    ANIMACAO("Animação"),
+    MUSICAL("Musical"),
+    INFANTIL("Infantil");
     
     private final String descricao;
     

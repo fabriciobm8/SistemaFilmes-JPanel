@@ -11,7 +11,7 @@ public class FilmeTableModel extends AbstractTableModel {
     private final String[] colunas = {
         "ID", "Descrição", "Ano", "Diretor", "Gênero", "Tipo", "Origem",
         "Tipo de Mídia", "Locação", "Sublocação", "Estante",
-        "Estante Prateleira", "Estante Prateleira Coluna"
+        "Estante Prateleira", "Estante Prat. Coluna"
     };
 
     public FilmeTableModel() {

@@ -16,6 +16,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.filechooser.FileNameExtensionFilter;
+import javax.swing.table.DefaultTableCellRenderer;
 
 public class MainFrame extends JFrame {
     private final FilmeController controller;
@@ -112,6 +113,7 @@ public class MainFrame extends JFrame {
         txtEstantePrateleiraColunaFiltro = new JTextField(5);
 
         lblContagem = new JLabel("Total: 0 filmes");
+        lblContagem.setFont(new Font("Arial", Font.PLAIN, 16));
 
         // Inicializa a tabela
         tableModel = new FilmeTableModel();
@@ -119,18 +121,24 @@ public class MainFrame extends JFrame {
         tblFilmes.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
         tblFilmes.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
         tblFilmes.getColumnModel().getColumn(0).setPreferredWidth(50);
-        tblFilmes.getColumnModel().getColumn(1).setPreferredWidth(200);
-        tblFilmes.getColumnModel().getColumn(2).setPreferredWidth(80);
+        tblFilmes.getColumnModel().getColumn(1).setPreferredWidth(255);
+        tblFilmes.getColumnModel().getColumn(2).setPreferredWidth(40);
         tblFilmes.getColumnModel().getColumn(3).setPreferredWidth(150);
-        tblFilmes.getColumnModel().getColumn(4).setPreferredWidth(100);
-        tblFilmes.getColumnModel().getColumn(5).setPreferredWidth(100);
-        tblFilmes.getColumnModel().getColumn(6).setPreferredWidth(100);
-        tblFilmes.getColumnModel().getColumn(7).setPreferredWidth(100);
-        tblFilmes.getColumnModel().getColumn(8).setPreferredWidth(100);
-        tblFilmes.getColumnModel().getColumn(9).setPreferredWidth(120);
-        tblFilmes.getColumnModel().getColumn(10).setPreferredWidth(100);
-        tblFilmes.getColumnModel().getColumn(11).setPreferredWidth(120);
-        tblFilmes.getColumnModel().getColumn(12).setPreferredWidth(150);
+        tblFilmes.getColumnModel().getColumn(4).setPreferredWidth(90);
+        tblFilmes.getColumnModel().getColumn(5).setPreferredWidth(90);
+        tblFilmes.getColumnModel().getColumn(6).setPreferredWidth(90);
+        tblFilmes.getColumnModel().getColumn(7).setPreferredWidth(90);
+        tblFilmes.getColumnModel().getColumn(8).setPreferredWidth(90);
+        tblFilmes.getColumnModel().getColumn(9).setPreferredWidth(100);
+        tblFilmes.getColumnModel().getColumn(10).setPreferredWidth(70);
+        tblFilmes.getColumnModel().getColumn(11).setPreferredWidth(100);
+        tblFilmes.getColumnModel().getColumn(12).setPreferredWidth(130);
+
+        // Centraliza as colunas "ID" e "Ano" (índices 0 e 2)
+        DefaultTableCellRenderer centerRenderer = new DefaultTableCellRenderer();
+        centerRenderer.setHorizontalAlignment(SwingConstants.CENTER);
+        tblFilmes.getColumnModel().getColumn(0).setCellRenderer(centerRenderer);
+        tblFilmes.getColumnModel().getColumn(2).setCellRenderer(centerRenderer);
 
         // Inicializa os botões
         btnAdicionar = new JButton("Adicionar");

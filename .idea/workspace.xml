@@ -6,16 +6,47 @@
   <component name="ChangeListManager">
     <list default="true" id="6aac3349-c1e6-4f2d-81e4-f8ef96df188e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/moviemanager/model/Genero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/moviemanager/model/Genero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/moviemanager/model/Locacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/moviemanager/model/Locacao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/moviemanager/model/Origem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/moviemanager/model/Origem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/moviemanager/model/Sublocacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/moviemanager/model/Sublocacao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/moviemanager/model/TipoMidia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/moviemanager/model/TipoMidia.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/moviemanager/view/FilmeTableModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/moviemanager/view/FilmeTableModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/moviemanager/view/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/moviemanager/view/MainFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/MovieManager.exe" beforeDir="false" afterPath="$PROJECT_DIR$/target/MovieManager.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/moviemanager/view/MainFrame$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/moviemanager/view/MainFrame$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/moviemanager/view/MainFrame$ComboItem.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/moviemanager/view/MainFrame$ComboItem.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/moviemanager/view/MainFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/moviemanager/view/MainFrame.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/movie-manager-1.0-SNAPSHOT-jar-with-dependencies.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/movie-manager-1.0-SNAPSHOT-jar-with-dependencies.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/movie-manager-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/movie-manager-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/icons/meu-icone.ico" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/icons/meu-icone.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/MovieManager.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/moviemanager/controller/FilmeController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/moviemanager/main/MovieManagerApp$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/moviemanager/main/MovieManagerApp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/moviemanager/model/Filme.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/moviemanager/model/Genero.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/moviemanager/model/Locacao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/moviemanager/model/Origem.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/moviemanager/model/Sublocacao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/moviemanager/model/Tipo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/moviemanager/model/TipoMidia.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/moviemanager/model/dao/FilmeDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/moviemanager/util/DatabaseConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/moviemanager/util/DatabaseConnection.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/moviemanager/util/ExcelExporter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/moviemanager/util/PdfExporter$PageNumberEventHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/moviemanager/util/PdfExporter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/moviemanager/view/FilmeFormDialog$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/moviemanager/view/FilmeFormDialog$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/moviemanager/view/FilmeFormDialog.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/moviemanager/view/FilmeTableModel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/moviemanager/view/MainFrame$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/moviemanager/view/MainFrame$ComboItem.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/moviemanager/view/MainFrame.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/config.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/icons/filme.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/icons/meu-icone.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/images/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/movie-manager-1.0-SNAPSHOT-jar-with-dependencies.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/movie-manager-1.0-SNAPSHOT.jar" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,20 +78,21 @@
   "keyToString": {
     "Application.MovieManagerApp.executor": "Run",
     "Maven.movie-manager [clean].executor": "Run",
+    "Maven.movie-manager [compile].executor": "Run",
     "Maven.movie-manager [package].executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Larissa/Desktop/projectFilmes/src/main/resources/images",
+    "last_opened_file_path": "C:/Users/Larissa/Desktop/projectFilmes/src/main/resources/icons",
     "settings.editor.selected.configurable": "com.poratu.idea.plugins.tomcat.setting.TomcatServersConfigurable"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Larissa\Desktop\projectFilmes\src\main\resources\images" />
       <recent name="C:\Users\Larissa\Desktop\projectFilmes\src\main\resources\icons" />
+      <recent name="C:\Users\Larissa\Desktop\projectFilmes\src\main\resources\images" />
     </key>
   </component>
   <component name="RunManager">
