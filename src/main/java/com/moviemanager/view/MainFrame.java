@@ -4,6 +4,7 @@ import com.formdev.flatlaf.FlatLightLaf;
 import com.moviemanager.controller.FilmeController;
 import com.moviemanager.model.*;
 import com.moviemanager.util.ExcelExporter;
+import com.moviemanager.util.PdfExporter;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
@@ -12,6 +13,7 @@ import java.awt.*;
 import java.awt.event.*;
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 import javax.swing.filechooser.FileNameExtensionFilter;
 
@@ -46,6 +48,7 @@ public class MainFrame extends JFrame {
     private final JButton btnFiltrar;
     private final JButton btnLimparFiltros;
     private final JButton btnExportar;
+    private final JButton btnExportarPdf;
 
     public MainFrame() {
         // Configura o look and feel
@@ -64,9 +67,9 @@ public class MainFrame extends JFrame {
         setExtendedState(JFrame.MAXIMIZED_BOTH);
 
         // Inicializa componentes
-        txtDescricaoFiltro = new JTextField(12); // Aumentado de 8 para 12
-        txtAnoInicialFiltro = new JTextField(3); // Reduzido de 4 para 3
-        txtAnoFinalFiltro = new JTextField(3); // Reduzido de 4 para 3
+        txtDescricaoFiltro = new JTextField(12);
+        txtAnoInicialFiltro = new JTextField(3);
+        txtAnoFinalFiltro = new JTextField(3);
         txtDiretorFiltro = new JTextField(8);
         cmbGeneroFiltro = new JComboBox<>();
         cmbGeneroFiltro.addItem(new ComboItem<>(null, "Todos"));
@@ -136,16 +139,17 @@ public class MainFrame extends JFrame {
         btnFiltrar = new JButton("Filtrar");
         btnLimparFiltros = new JButton("Limpar Filtros");
         btnExportar = new JButton("Exportar para Excel");
+        btnExportarPdf = new JButton("Exportar para PDF");
 
         // Layout da tela
         setLayout(new BorderLayout());
 
         // Painel de filtros (20% superior)
         JPanel panelFiltros = new JPanel(new GridBagLayout());
-        panelFiltros.setBorder(null); // Sem borda interna
+        panelFiltros.setBorder(null);
 
         GridBagConstraints gbc = new GridBagConstraints();
-        gbc.insets = new Insets(5, 2, 5, 2); // Margem horizontal de 2 pixels
+        gbc.insets = new Insets(5, 2, 5, 2);
         gbc.anchor = GridBagConstraints.WEST;
 
         // Primeira linha de filtros
@@ -156,7 +160,7 @@ public class MainFrame extends JFrame {
         panelFiltros.add(new JLabel("Descrição:"), gbc);
 
         gbc.gridx = 1;
-        gbc.weightx = 0.3; // Aumentado de 0.2 para 0.3
+        gbc.weightx = 0.3;
         gbc.fill = GridBagConstraints.HORIZONTAL;
         panelFiltros.add(txtDescricaoFiltro, gbc);
 
@@ -166,7 +170,7 @@ public class MainFrame extends JFrame {
         panelFiltros.add(new JLabel("Ano Inicial:"), gbc);
 
         gbc.gridx = 3;
-        gbc.weightx = 0.05; // Reduzido de 0.1 para 0.05
+        gbc.weightx = 0.05;
         gbc.fill = GridBagConstraints.HORIZONTAL;
         panelFiltros.add(txtAnoInicialFiltro, gbc);
 
@@ -176,7 +180,7 @@ public class MainFrame extends JFrame {
         panelFiltros.add(new JLabel("Ano Final:"), gbc);
 
         gbc.gridx = 5;
-        gbc.weightx = 0.05; // Reduzido de 0.1 para 0.05
+        gbc.weightx = 0.05;
         gbc.fill = GridBagConstraints.HORIZONTAL;
         panelFiltros.add(txtAnoFinalFiltro, gbc);
 
@@ -300,6 +304,7 @@ public class MainFrame extends JFrame {
         panelBotoesFiltro.add(btnFiltrar);
         panelBotoesFiltro.add(btnLimparFiltros);
         panelBotoesFiltro.add(btnExportar);
+        panelBotoesFiltro.add(btnExportarPdf);
         panelBotoesFiltro.add(Box.createHorizontalStrut(20));
         panelBotoesFiltro.add(lblContagem);
         panelFiltros.add(panelBotoesFiltro, gbc);
@@ -314,15 +319,15 @@ public class MainFrame extends JFrame {
 
         // Painel para combinar imagem e filtros
         JPanel panelFiltroComImagem = new JPanel(new BorderLayout());
-        panelFiltroComImagem.setBorder(new EmptyBorder(0, 0, 0, 0)); // Sem margens
+        panelFiltroComImagem.setBorder(new EmptyBorder(0, 0, 0, 0));
 
         // Adiciona a imagem à esquerda
         JLabel lblImagem = new JLabel();
         try {
             ImageIcon icon = new ImageIcon(getClass().getResource("/images/logo.png"));
-            Image img = icon.getImage(); // Tamanho original (200x160 pixels)
+            Image img = icon.getImage();
             lblImagem.setIcon(new ImageIcon(img));
-            lblImagem.setBorder(new EmptyBorder(5, 0, 5, 5)); // Margem mínima
+            lblImagem.setBorder(new EmptyBorder(5, 0, 5, 5));
         } catch (Exception e) {
             System.err.println("Erro ao carregar a imagem: " + e.getMessage());
             lblImagem.setText("Imagem não encontrada");
@@ -331,7 +336,7 @@ public class MainFrame extends JFrame {
 
         // Painel para filtros com título
         JPanel panelFiltrosComBorda = new JPanel(new GridBagLayout());
-        panelFiltrosComBorda.setBorder(new TitledBorder("Filtros")); // Mantido com borda visível
+        panelFiltrosComBorda.setBorder(new TitledBorder("Filtros"));
         GridBagConstraints gbcFiltros = new GridBagConstraints();
         gbcFiltros.anchor = GridBagConstraints.WEST;
         gbcFiltros.fill = GridBagConstraints.HORIZONTAL;
@@ -399,6 +404,103 @@ public class MainFrame extends JFrame {
                 }
             }
         });
+        btnExportarPdf.addActionListener(e -> {
+            JFileChooser fileChooser = new JFileChooser();
+            fileChooser.setDialogTitle("Salvar como PDF");
+            fileChooser.setFileFilter(new FileNameExtensionFilter("Arquivos PDF (*.pdf)", "pdf"));
+            if (fileChooser.showSaveDialog(MainFrame.this) == JFileChooser.APPROVE_OPTION) {
+                String filePath = fileChooser.getSelectedFile().getAbsolutePath();
+                if (!filePath.toLowerCase().endsWith(".pdf")) {
+                    filePath += ".pdf";
+                }
+                try {
+                    List<Filme> filmes = tableModel.getFilmes();
+                    int totalFilmes = filmes.size();
+                    String filtrosAplicados = construirFiltrosAplicados();
+                    PdfExporter.exportToPdf(filmes, filePath, filtrosAplicados, totalFilmes);
+                    JOptionPane.showMessageDialog(MainFrame.this, "Relatório PDF gerado com sucesso!", "Sucesso", JOptionPane.INFORMATION_MESSAGE);
+                } catch (IOException ex) {
+                    JOptionPane.showMessageDialog(MainFrame.this, "Erro ao gerar PDF: " + ex.getMessage(), "Erro", JOptionPane.ERROR_MESSAGE);
+                    ex.printStackTrace();
+                }
+            }
+        });
+    }
+
+    @SuppressWarnings("unchecked")
+    private String construirFiltrosAplicados() {
+        List<String> filtros = new ArrayList<>();
+
+        String descricao = txtDescricaoFiltro.getText().trim();
+        if (!descricao.isEmpty()) {
+            filtros.add("Descrição: '" + descricao + "'");
+        }
+
+        String anoInicial = txtAnoInicialFiltro.getText().trim();
+        if (!anoInicial.isEmpty()) {
+            filtros.add("Ano Inicial: " + anoInicial);
+        }
+
+        String anoFinal = txtAnoFinalFiltro.getText().trim();
+        if (!anoFinal.isEmpty()) {
+            filtros.add("Ano Final: " + anoFinal);
+        }
+
+        String diretor = txtDiretorFiltro.getText().trim();
+        if (!diretor.isEmpty()) {
+            filtros.add("Diretor: '" + diretor + "'");
+        }
+
+        ComboItem<Genero> generoItem = (ComboItem<Genero>) cmbGeneroFiltro.getSelectedItem();
+        if (generoItem.getValue() != null) {
+            filtros.add("Gênero: " + generoItem.getValue().getDescricao());
+        }
+
+        ComboItem<Tipo> tipoItem = (ComboItem<Tipo>) cmbTipoFiltro.getSelectedItem();
+        if (tipoItem.getValue() != null) {
+            filtros.add("Tipo: " + tipoItem.getValue().getDescricao());
+        }
+
+        ComboItem<Origem> origemItem = (ComboItem<Origem>) cmbOrigemFiltro.getSelectedItem();
+        if (origemItem.getValue() != null) {
+            filtros.add("Origem: " + origemItem.getValue().getDescricao());
+        }
+
+        ComboItem<TipoMidia> tipoMidiaItem = (ComboItem<TipoMidia>) cmbTipoMidiaFiltro.getSelectedItem();
+        if (tipoMidiaItem.getValue() != null) {
+            filtros.add("Tipo de Mídia: " + tipoMidiaItem.getValue().getDescricao());
+        }
+
+        ComboItem<Locacao> locacaoItem = (ComboItem<Locacao>) cmbLocacaoFiltro.getSelectedItem();
+        if (locacaoItem.getValue() != null) {
+            filtros.add("Locação: " + locacaoItem.getValue().getDescricao());
+        }
+
+        ComboItem<Sublocacao> sublocacaoItem = (ComboItem<Sublocacao>) cmbSublocacaoFiltro.getSelectedItem();
+        if (sublocacaoItem.getValue() != null) {
+            filtros.add("Sublocação: " + sublocacaoItem.getValue().getDescricao());
+        }
+
+        String estante = txtEstanteFiltro.getText().trim();
+        if (!estante.isEmpty()) {
+            filtros.add("Estante: '" + estante + "'");
+        }
+
+        String estantePrateleira = txtEstantePrateleiraFiltro.getText().trim();
+        if (!estantePrateleira.isEmpty()) {
+            filtros.add("Estante Prateleira: '" + estantePrateleira + "'");
+        }
+
+        String estantePrateleiraColuna = txtEstantePrateleiraColunaFiltro.getText().trim();
+        if (!estantePrateleiraColuna.isEmpty()) {
+            filtros.add("Estante Prateleira Coluna: '" + estantePrateleiraColuna + "'");
+        }
+
+        if (filtros.isEmpty()) {
+            return "Nenhum (Lista Completa)";
+        } else {
+            return String.join(", ", filtros);
+        }
     }
 
     private void carregarDados() {

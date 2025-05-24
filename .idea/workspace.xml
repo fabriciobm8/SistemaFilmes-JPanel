@@ -6,12 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="6aac3349-c1e6-4f2d-81e4-f8ef96df188e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/moviemanager/view/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/moviemanager/view/MainFrame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/MovieManager.exe" beforeDir="false" afterPath="$PROJECT_DIR$/target/MovieManager.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/moviemanager/view/MainFrame$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/moviemanager/view/MainFrame$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/moviemanager/view/MainFrame$ComboItem.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/moviemanager/view/MainFrame$ComboItem.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/moviemanager/view/MainFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/moviemanager/view/MainFrame.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/movie-manager-1.0-SNAPSHOT-jar-with-dependencies.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/movie-manager-1.0-SNAPSHOT-jar-with-dependencies.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/movie-manager-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/movie-manager-1.0-SNAPSHOT.jar" afterDir="false" />
     </list>

@@ -8,6 +8,7 @@ com\moviemanager\view\MainFrame.class
 com\moviemanager\model\Origem.class
 com\moviemanager\model\Filme.class
 com\moviemanager\model\Tipo.class
+com\moviemanager\util\PdfExporter.class
 com\moviemanager\model\Sublocacao.class
 com\moviemanager\model\Genero.class
 com\moviemanager\view\FilmeFormDialog$1.class
@@ -15,6 +16,7 @@ com\moviemanager\model\TipoMidia.class
 com\moviemanager\util\ExcelExporter.class
 com\moviemanager\main\MovieManagerApp.class
 com\moviemanager\util\DatabaseConnection.class
+com\moviemanager\util\PdfExporter$PageNumberEventHandler.class
 com\moviemanager\util\DatabaseConfig.class
 com\moviemanager\view\FilmeFormDialog.class
 com\moviemanager\view\MainFrame$ComboItem.class
