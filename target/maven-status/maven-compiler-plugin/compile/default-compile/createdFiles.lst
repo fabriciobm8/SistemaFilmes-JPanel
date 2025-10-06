@@ -16,7 +16,6 @@ com\moviemanager\model\TipoMidia.class
 com\moviemanager\util\ExcelExporter.class
 com\moviemanager\main\MovieManagerApp.class
 com\moviemanager\util\DatabaseConnection.class
-com\moviemanager\util\PdfExporter$PageNumberEventHandler.class
 com\moviemanager\util\DatabaseConfig.class
 com\moviemanager\view\FilmeFormDialog.class
 com\moviemanager\view\MainFrame$ComboItem.class

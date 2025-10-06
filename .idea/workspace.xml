@@ -6,11 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="6aac3349-c1e6-4f2d-81e4-f8ef96df188e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/MovieManager.exe" beforeDir="false" afterPath="$PROJECT_DIR$/target/MovieManager.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/movie-manager-1.0-SNAPSHOT-jar-with-dependencies.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/movie-manager-1.0-SNAPSHOT-jar-with-dependencies.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/movie-manager-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/movie-manager-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/moviemanager/util/PdfExporter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/moviemanager/util/PdfExporter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/moviemanager/util/PdfExporter$PageNumberEventHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/moviemanager/util/PdfExporter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/moviemanager/util/PdfExporter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +71,7 @@
       <recent name="C:\Users\Larissa\Desktop\projectFilmes\src\main\resources\images" />
     </key>
   </component>
-  <component name="RunManager" selected="Maven.movie-manager [compile]">
+  <component name="RunManager" selected="Application.MovieManagerApp">
     <configuration name="MovieManagerApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.moviemanager.main.MovieManagerApp" />
       <module name="movie-manager" />
@@ -131,8 +130,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Maven.movie-manager [compile]" />
         <item itemvalue="Application.MovieManagerApp" />
+        <item itemvalue="Maven.movie-manager [compile]" />
       </list>
     </recent_temporary>
   </component>

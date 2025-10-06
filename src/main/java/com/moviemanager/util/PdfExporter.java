@@ -1,13 +1,10 @@
 package com.moviemanager.util;
 
-import com.itextpdf.kernel.events.Event;
-import com.itextpdf.kernel.events.IEventHandler;
-import com.itextpdf.kernel.events.PdfDocumentEvent;
 import com.itextpdf.kernel.geom.Rectangle;
 import com.itextpdf.kernel.pdf.PdfDocument;
 import com.itextpdf.kernel.pdf.PdfPage;
+import com.itextpdf.kernel.pdf.PdfReader;
 import com.itextpdf.kernel.pdf.PdfWriter;
-import com.itextpdf.kernel.pdf.canvas.PdfCanvas;
 import com.itextpdf.kernel.font.PdfFontFactory;
 import com.itextpdf.kernel.font.PdfFont;
 import com.itextpdf.io.font.constants.StandardFonts;
@@ -16,47 +13,48 @@ import com.itextpdf.layout.element.Cell;
 import com.itextpdf.layout.element.Paragraph;
 import com.itextpdf.layout.element.Table;
 import com.itextpdf.layout.properties.TextAlignment;
+import com.itextpdf.layout.properties.VerticalAlignment;
 import com.moviemanager.model.Filme;
+import java.io.File;
 import java.io.IOException;
 import java.util.List;
 
 public class PdfExporter {
   public static void exportToPdf(List<Filme> filmes, String filePath, String filtrosAplicados, int totalFilmes) throws IOException {
-    PdfWriter writer = new PdfWriter(filePath);
+    // Criar arquivo temporário para o conteúdo sem números de página
+    String tempFilePath = filePath + ".tmp";
+    PdfWriter writer = new PdfWriter(tempFilePath);
     PdfDocument pdf = new PdfDocument(writer);
     Document document = new Document(pdf);
 
-    // Adiciona manipulador de eventos para números de página
-    pdf.addEventHandler(PdfDocumentEvent.END_PAGE, new PageNumberEventHandler(pdf));
-
     // Título
     Paragraph title = new Paragraph("Relatório de Filmes")
-        .setTextAlignment(TextAlignment.CENTER)
-        .setFontSize(16)
-        .setBold();
+            .setTextAlignment(TextAlignment.CENTER)
+            .setFontSize(16)
+            .setBold();
     document.add(title);
 
     // Data
     String data = new java.text.SimpleDateFormat("dd/MM/yyyy").format(new java.util.Date());
     Paragraph dataParagraph = new Paragraph("Gerado em: " + data)
-        .setTextAlignment(TextAlignment.LEFT)
-        .setFontSize(12)
-        .setMarginTop(5);
+            .setTextAlignment(TextAlignment.LEFT)
+            .setFontSize(12)
+            .setMarginTop(5);
     document.add(dataParagraph);
 
     // Contagem
     Paragraph contagemParagraph = new Paragraph("Total: " + totalFilmes + " filme" + (totalFilmes == 1 ? "" : "s"))
-        .setTextAlignment(TextAlignment.LEFT)
-        .setFontSize(12)
-        .setMarginTop(5);
+            .setTextAlignment(TextAlignment.LEFT)
+            .setFontSize(12)
+            .setMarginTop(5);
     document.add(contagemParagraph);
 
     // Filtros
     Paragraph filtrosParagraph = new Paragraph("Filtros: " + filtrosAplicados)
-        .setTextAlignment(TextAlignment.LEFT)
-        .setFontSize(12)
-        .setMarginTop(5)
-        .setMarginBottom(10);
+            .setTextAlignment(TextAlignment.LEFT)
+            .setFontSize(12)
+            .setMarginTop(5)
+            .setMarginBottom(10);
     document.add(filtrosParagraph);
 
     // Tabela
@@ -71,51 +69,46 @@ public class PdfExporter {
     table.addHeaderCell(new Cell().add(new Paragraph("Gênero")).setBold());
     table.addHeaderCell(new Cell().add(new Paragraph("Tipo de Mídia")).setBold());
 
-    // Dados (sem negrito)
+    // Dados (sem negrito, com fonte menor)
     for (Filme filme : filmes) {
-      table.addCell(new Cell().add(new Paragraph(filme.getDescricao() != null ? filme.getDescricao() : "")));
-      table.addCell(new Cell().add(new Paragraph(filme.getAno() != null ? filme.getAno().toString() : "")));
-      table.addCell(new Cell().add(new Paragraph(filme.getDiretor() != null ? filme.getDiretor() : "")));
-      table.addCell(new Cell().add(new Paragraph(filme.getGenero() != null ? filme.getGenero().getDescricao() : "")));
-      table.addCell(new Cell().add(new Paragraph(filme.getTipoMidia() != null ? filme.getTipoMidia().getDescricao() : "")));
+      table.addCell(new Cell().add(new Paragraph(filme.getDescricao() != null ? filme.getDescricao() : "").setFontSize(8)));
+      table.addCell(new Cell().add(new Paragraph(filme.getAno() != null ? filme.getAno().toString() : "").setFontSize(8)));
+      table.addCell(new Cell().add(new Paragraph(filme.getDiretor() != null ? filme.getDiretor() : "").setFontSize(8)));
+      table.addCell(new Cell().add(new Paragraph(filme.getGenero() != null ? filme.getGenero().getDescricao() : "").setFontSize(8)));
+      table.addCell(new Cell().add(new Paragraph(filme.getTipoMidia() != null ? filme.getTipoMidia().getDescricao() : "").setFontSize(8)));
     }
 
     document.add(table);
     document.close();
+
+    // Adicionar números de página no arquivo final
+    addPageNumbers(tempFilePath, filePath);
+
+    // Deletar o arquivo temporário
+    new File(tempFilePath).delete();
   }
 
-  // Manipulador de eventos para números de página
-  private static class PageNumberEventHandler implements IEventHandler {
-    private final PdfDocument pdf;
+  private static void addPageNumbers(String src, String dest) throws IOException {
+    PdfDocument pdfDoc = new PdfDocument(new PdfReader(src), new PdfWriter(dest));
+    Document doc = new Document(pdfDoc);
 
-    public PageNumberEventHandler(PdfDocument pdf) {
-      this.pdf = pdf;
-    }
+    int numberOfPages = pdfDoc.getNumberOfPages();
+    PdfFont font = PdfFontFactory.createFont(StandardFonts.HELVETICA);
 
-    @Override
-    public void handleEvent(Event event) {
-      PdfDocumentEvent docEvent = (PdfDocumentEvent) event;
-      PdfPage page = docEvent.getPage();
-      PdfCanvas canvas = new PdfCanvas(page);
+    for (int i = 1; i <= numberOfPages; i++) {
+      PdfPage page = pdfDoc.getPage(i);
       Rectangle pageSize = page.getPageSize();
-      int pageNumber = pdf.getPageNumber(page);
-      int totalPages = pdf.getNumberOfPages();
-
-      // Adiciona "Página X de Y" no rodapé (centro)
-      String pageText = String.format("Página %d de %d", pageNumber, totalPages);
-      canvas.beginText();
-      try {
-        PdfFont font = PdfFontFactory.createFont(StandardFonts.HELVETICA);
-        canvas.setFontAndSize(font, 10);
-      } catch (IOException e) {
-        e.printStackTrace();
-      }
       float x = pageSize.getWidth() / 2;
-      float y = pageSize.getBottom() + 20; // 20 pontos acima da borda inferior
-      canvas.moveText(x - (pageText.length() * 2.5f), y); // Ajuste aproximado para centralizar
-      canvas.showText(pageText);
-      canvas.endText();
-      canvas.release();
+      float y = pageSize.getBottom() + 20;
+
+      // Adicionar texto alinhado ao centro
+      Paragraph pageText = new Paragraph(String.format("Página %d de %d", i, numberOfPages))
+              .setFont(font)
+              .setFontSize(10);
+
+      doc.showTextAligned(pageText, x, y, i, TextAlignment.CENTER, VerticalAlignment.MIDDLE, 0);
     }
+
+    doc.close();
   }
 }
