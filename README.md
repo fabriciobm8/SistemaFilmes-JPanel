@@ -13,6 +13,14 @@ Um sistema desktop desenvolvido em Java para gerenciar uma coleção de filmes, 
 1. Crie um banco de dados PostgreSQL chamado `filmes`
 2. Configure as credenciais de acesso no arquivo `config.properties` em `src/main/resources`
 
+## Como Gerar Arquivos .jar e .exe
+
+1. No intellij abra o Maven do lado direito da tela
+2. Na pasta Lifecycle dê um clique duplo em clean (vai limpar/apagar a pasta target)
+3. Dê um clique duplo em Lifecycle - compile
+4. Dê um clique duplo em Lifecycle - package
+5. Veirifque na pasta target os arquivos criados (copie e cole onde deseja o arquivo .exe)
+
 ## Como Executar
 
 ```bash

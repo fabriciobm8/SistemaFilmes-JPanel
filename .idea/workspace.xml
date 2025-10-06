@@ -6,47 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="6aac3349-c1e6-4f2d-81e4-f8ef96df188e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/moviemanager/model/Genero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/moviemanager/model/Genero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/moviemanager/model/Locacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/moviemanager/model/Locacao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/moviemanager/model/Origem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/moviemanager/model/Origem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/moviemanager/model/Sublocacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/moviemanager/model/Sublocacao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/moviemanager/model/TipoMidia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/moviemanager/model/TipoMidia.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/moviemanager/view/FilmeTableModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/moviemanager/view/FilmeTableModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/moviemanager/view/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/moviemanager/view/MainFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/icons/meu-icone.ico" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/icons/meu-icone.ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/MovieManager.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/moviemanager/controller/FilmeController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/moviemanager/main/MovieManagerApp$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/moviemanager/main/MovieManagerApp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/moviemanager/model/Filme.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/moviemanager/model/Genero.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/moviemanager/model/Locacao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/moviemanager/model/Origem.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/moviemanager/model/Sublocacao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/moviemanager/model/Tipo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/moviemanager/model/TipoMidia.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/moviemanager/model/dao/FilmeDAO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/moviemanager/util/DatabaseConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/moviemanager/util/DatabaseConnection.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/moviemanager/util/ExcelExporter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/moviemanager/util/PdfExporter$PageNumberEventHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/moviemanager/util/PdfExporter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/moviemanager/view/FilmeFormDialog$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/moviemanager/view/FilmeFormDialog$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/moviemanager/view/FilmeFormDialog.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/moviemanager/view/FilmeTableModel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/moviemanager/view/MainFrame$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/moviemanager/view/MainFrame$ComboItem.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/moviemanager/view/MainFrame.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/config.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/icons/filme.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/icons/meu-icone.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/images/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/movie-manager-1.0-SNAPSHOT-jar-with-dependencies.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/movie-manager-1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/MovieManager.exe" beforeDir="false" afterPath="$PROJECT_DIR$/target/MovieManager.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/movie-manager-1.0-SNAPSHOT-jar-with-dependencies.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/movie-manager-1.0-SNAPSHOT-jar-with-dependencies.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/movie-manager-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/movie-manager-1.0-SNAPSHOT.jar" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,6 +27,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "fabriciobm8"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/fabriciobm8/SistemaFilmes-JPanel.git",
+    "accountId": "f0834b68-4916-4fc2-8943-309692795716"
+  }
+}]]></component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -82,10 +58,11 @@
     "Maven.movie-manager [package].executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Larissa/Desktop/projectFilmes/src/main/resources/icons",
+    "last_opened_file_path": "C:/FABRICIO/3.CURSOS PROGRAMACAO/PROJETOS DESKTOP/projectFilmes",
     "settings.editor.selected.configurable": "com.poratu.idea.plugins.tomcat.setting.TomcatServersConfigurable"
   }
 }]]></component>
@@ -95,7 +72,7 @@
       <recent name="C:\Users\Larissa\Desktop\projectFilmes\src\main\resources\images" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Maven.movie-manager [compile]">
     <configuration name="MovieManagerApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.moviemanager.main.MovieManagerApp" />
       <module name="movie-manager" />
@@ -122,18 +99,42 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="movie-manager [compile]" type="MavenRunConfiguration" factoryName="Maven" temporary="true">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="cmdOptions" />
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="compile" />
+              </list>
+            </option>
+            <option name="multimoduleDir" />
+            <option name="pomFileName" value="pom.xml" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="projectsCmdOptionValues">
+              <list />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Maven.movie-manager [compile]" />
         <item itemvalue="Application.MovieManagerApp" />
       </list>
     </recent_temporary>
-  </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="jdk-21.0.2-corretto-21.0.2-4caba194b151-51586f01" />
-      </set>
-    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
