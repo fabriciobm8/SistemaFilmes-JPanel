@@ -28,6 +28,16 @@ mvn clean package
 java -jar target/movie-manager-1.0-SNAPSHOT-jar-with-dependencies.jar
 ```
 
+## Como Gerar BackUp do Banco de Dados Postgres
+
+1. No terminal ou Power Shell: PS C:\FABRICIO> pg_dump -U postgres -h localhost -p 5432 -d filmes -f C:\FABRICIO\filmes_backup.sql
+2. Coloque a senha: root
+3. Sera gerado o arquivo filmes_backup.sql na pasta FABRICIO
+4. No destino (onde se deseja colocar o BackUp criado): no pgadmin crie o bd filmes (Vazio) ou outro que queira
+5. PS C:\FABRICIO> psql -U postgres -h localhost -p 5432 -d filmes -f C:\FABRICIO\filmes_backup.sql
+6. coloca a senha: root
+7. De um refresh. Pronto, verifique as tabelas do BD (todos os dados devem estar copiados)
+
 ## Funcionalidades
 
 - Cadastro, edição e exclusão de filmes

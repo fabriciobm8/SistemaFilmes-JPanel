@@ -6,10 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6aac3349-c1e6-4f2d-81e4-f8ef96df188e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/moviemanager/util/PdfExporter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/moviemanager/util/PdfExporter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/moviemanager/util/PdfExporter$PageNumberEventHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/moviemanager/util/PdfExporter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/moviemanager/util/PdfExporter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,18 +23,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "fabriciobm8"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;fabriciobm8&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/fabriciobm8/SistemaFilmes-JPanel.git",
-    "accountId": "f0834b68-4916-4fc2-8943-309692795716"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/fabriciobm8/SistemaFilmes-JPanel.git&quot;,
+    &quot;accountId&quot;: &quot;f0834b68-4916-4fc2-8943-309692795716&quot;
   }
-}]]></component>
+}</component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -49,22 +46,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.MovieManagerApp.executor": "Run",
-    "Maven.movie-manager [clean].executor": "Run",
-    "Maven.movie-manager [compile].executor": "Run",
-    "Maven.movie-manager [package].executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/FABRICIO/3.CURSOS PROGRAMACAO/PROJETOS DESKTOP/projectFilmes",
-    "settings.editor.selected.configurable": "com.poratu.idea.plugins.tomcat.setting.TomcatServersConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.MovieManagerApp.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.movie-manager [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.movie-manager [compile].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.movie-manager [package].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/FABRICIO/3.CURSOS PROGRAMACAO/PROJETOS DESKTOP/projectFilmes&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.poratu.idea.plugins.tomcat.setting.TomcatServersConfigurable&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Larissa\Desktop\projectFilmes\src\main\resources\icons" />
